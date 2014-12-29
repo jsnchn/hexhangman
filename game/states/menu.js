@@ -15,6 +15,10 @@ Menu.prototype = {
     this.titleText.input.useHandCursor = true;
     this.titleText.events.onInputDown.add(this.startGame,this);
 
+    var style = { font: '20px Arial', fill: '#ffffff', align: 'center'};
+    this.titleText = this.game.add.text(this.game.world.centerX, this.game.world.centerY + 100, 'Guess the color.', style);
+    this.titleText.anchor.setTo(0.5, 0.5);
+
   },
   update: function() {
     
